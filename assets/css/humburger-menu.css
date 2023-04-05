@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+.menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background: #000000;
+    font-size: 16px;
+    box-sizing: border-box;
+    z-index: 2
+}
+.menu-item {
+    display:block;
+    padding: 45px 28px
+}
+.menu-item a {
+    text-decoration: none;
+    color: #E8FF00;
+    font-size: 30px;
+}
+.menu-item a::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-right: solid 2px #FFA421;
+    right: 15px;
+    margin: 8px;
+}
+.menu-btn {
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    z-index: 3;
+    box-sizing: border-box;
+}
+button {
+   border: none;
+  background: transparent;
+}
+.menu-btn span {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #00FFEB;
+    border-radius: 2px;
+    filter: drop-shadow(3px 3px 3px rgba(0,0,0,0.6));
+}
+.menu-btn span:nth-child(1) {
+    top: 0
+}
+.menu-btn span:nth-child(2) {
+    top: 10px
+}
+.menu-btn span:nth-child(3) {
+    top: 20px
+}   
+.menu-btn.open span {
+   height: 92vh;
+   transition: all 0.7s;
+   background: #FF3838;
+}
+@media (min-width: 1040px) {
+  .humburger {
+    display: none;
+  }
+}
